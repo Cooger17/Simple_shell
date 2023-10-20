@@ -34,9 +34,9 @@ int _eputchar(char c)
 	if (c == BUF_FLUSH || i >= WRITE_BUF_SIZE)
 	{
 		if (write(2, buf, i) == -1)
-    {
-      return (0);
-    }
+		{
+			return (0);
+		}
 		i = 0;
 	}
 	if (c != BUF_FLUSH)
@@ -60,9 +60,9 @@ int _putfd(char c, int fd)
 	if (c == BUF_FLUSH || i >= WRITE_BUF_SIZE)
 	{
 		if (write(fd, buf, i) == -1)
-    {
-      return (0);
-    }
+		{
+			return (0);
+		}
 		i = 0;
 	}
 	if (c != BUF_FLUSH)

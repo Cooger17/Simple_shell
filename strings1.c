@@ -79,9 +79,9 @@ int _putchar(char c)
 	if (c == BUF_FLUSH || i >= WRITE_BUF_SIZE)
 	{
 		if (write(1, buf, i) == -1)
-    {
-      return (0);
-    }
+		{
+			return (0);
+		}
 		i = 0;
 	}
 	if (c != BUF_FLUSH)
